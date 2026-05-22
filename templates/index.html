@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEO Opportunity Finder — Graphura India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="brand-icon">📈</span>
+      <span class="brand-name">Graphura <span class="brand-accent">SEO</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#predictor">Predictor</a></li>
+      <li><a href="#gsc-dashboard">GSC Dashboard</a></li>
+      <li><a href="#assistant">AI Assistant</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🤖 AI-Powered · Random Forest Model</div>
+    <h1 class="hero-title">
+      Find Your Best<br/>
+      <span class="gradient-text">SEO Opportunities</span>
+    </h1>
+    <p class="hero-subtitle">
+      Predict keyword opportunity scores using machine learning trained on 500+ real SEO keywords.
+      Built for <strong>Graphura India</strong> to drive organic growth.
+    </p>
+    <div class="hero-cta">
+      <a href="#predictor" class="btn btn-primary">Try the Predictor ↓</a>
+      <a href="#gsc-dashboard" class="btn btn-ghost">📊 GSC Dashboard</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Keywords Analyzed</span></div>
+      <div class="stat"><span class="stat-num">GSC</span><span class="stat-label">CSV Upload</span></div>
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label">ML Features</span></div>
+      <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Powered Assistant</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Process</span>
+      <h2>How It Works</h2>
+      <p>Our Random Forest model analyzes 7 key SEO signals to classify keyword opportunities</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon">🔍</div>
+        <div class="step-num">01</div>
+        <h3>Input Keyword Data</h3>
+        <p>Enter search volume, difficulty, current ranking, and other keyword metrics</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">🧠</div>
+        <div class="step-num">02</div>
+        <h3>ML Prediction</h3>
+        <p>Random Forest model with 200 trees analyzes patterns from 500+ keywords</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">📊</div>
+        <div class="step-num">03</div>
+        <h3>Opportunity Score</h3>
+        <p>Get classified as High, Medium, or Low opportunity with confidence scores</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">💡</div>
+        <div class="step-num">04</div>
+        <h3>AI Recommendations</h3>
+        <p>Ask the AI assistant for tailored content strategy and ranking tactics</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PREDICTOR ── -->
+<section class="predictor-section" id="predictor">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">ML Model</span>
+      <h2>Keyword Opportunity Predictor</h2>
+      <p>Fill in the keyword details below to get an instant AI-powered opportunity score</p>
+    </div>
+
+    <div class="predictor-layout">
+      <!-- Form -->
+      <div class="predictor-form-card">
+        <div class="form-header">
+          <span class="form-icon">🎯</span>
+          <h3>Keyword Details</h3>
+        </div>
+
+        <form id="predictForm">
+          <div class="form-group">
+            <label>Keyword</label>
+            <input type="text" id="keyword" placeholder="e.g. seo agency india" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Search Volume <span class="hint">monthly searches</span></label>
+              <input type="number" id="search_volume" placeholder="e.g. 1000" min="0" required/>
+            </div>
+            <div class="form-group">
+              <label>Keyword Difficulty <span class="hint">0–100</span></label>
+              <input type="number" id="keyword_difficulty" placeholder="e.g. 45" min="0" max="100" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Ranking <span class="hint">position</span></label>
+              <input type="number" id="current_ranking" placeholder="e.g. 20" min="0" required/>
+            </div>
+            <div class="form-group">
+              <label>Relevance to Graphura <span class="hint">1–10</span></label>
+              <input type="number" id="relevance_to_graphura" placeholder="e.g. 8" min="1" max="10" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Competitor Presence</label>
+              <select id="competitor_presence">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Content Type</label>
+              <select id="content_type">
+                <option value="Blog">Blog</option>
+                <option value="Service Page">Service Page</option>
+                <option value="Landing Page">Landing Page</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Search Intent</label>
+            <div class="intent-pills">
+              <label class="pill-label">
+                <input type="radio" name="search_intent" value="Informational" checked/>
+                <span>Informational</span>
+              </label>
+              <label class="pill-label">
+                <input type="radio" name="search_intent" value="Commercial"/>
+                <span>Commercial</span>
+              </label>
+              <label class="pill-label">
+                <input type="radio" name="search_intent" value="Transactional"/>
+                <span>Transactional</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="predictBtn">
+            <span class="btn-text">🔮 Predict Opportunity</span>
+            <span class="btn-loader hidden">Analyzing...</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="result-panel" id="resultPanel">
+        <div class="result-empty" id="resultEmpty">
+          <div class="empty-icon">🎯</div>
+          <p>Fill in the form and click <strong>Predict</strong> to see your keyword's opportunity score</p>
+          <div class="sample-keywords">
+            <p class="sample-label">Try a sample:</p>
+            <button class="sample-btn" onclick="fillSample('seo agency india', 500, 39, 0, 9, 'Low', 'Blog', 'Commercial')">seo agency india</button>
+            <button class="sample-btn" onclick="fillSample('ppc management india', 10000, 13, 5, 3, 'Low', 'Landing Page', 'Transactional')">ppc management india</button>
+            <button class="sample-btn" onclick="fillSample('digital marketing for startups', 10000, 56, 10, 10, 'High', 'Blog', 'Commercial')">digital marketing for startups</button>
+          </div>
+        </div>
+
+        <div class="result-content hidden" id="resultContent">
+          <div class="result-badge-wrap">
+            <div class="result-keyword" id="resultKeyword"></div>
+            <div class="result-badge" id="resultBadge"></div>
+          </div>
+
+          <div class="confidence-block">
+            <div class="confidence-label">
+              <span>Model Confidence</span>
+              <span id="confidenceVal"></span>
+            </div>
+            <div class="confidence-bar">
+              <div class="confidence-fill" id="confidenceFill"></div>
+            </div>
+          </div>
+
+          <div class="prob-breakdown">
+            <h4>Probability Breakdown</h4>
+            <div id="probBars"></div>
+          </div>
+
+          <div class="result-actions">
+            <button class="btn btn-ghost btn-sm" onclick="askAboutResult()">
+              💬 Ask AI About This
+            </button>
+            <button class="btn btn-ghost btn-sm" onclick="resetForm()">
+              🔄 New Prediction
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GSC DASHBOARD ── -->
+<section class="gsc-section" id="gsc-dashboard">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Google Search Console</span>
+      <h2>GSC Performance Dashboard</h2>
+      <p>Upload your GSC Queries CSV — get instant ML-powered opportunity analysis, charts, and AI insights</p>
+    </div>
+
+    <!-- Upload Zone -->
+    <div class="upload-zone" id="uploadZone">
+      <div class="upload-inner" id="uploadInner">
+        <div class="upload-icon">📂</div>
+        <h3>Drop your Keyword CSV here</h3>
+        <p>Upload your keyword data CSV with the required columns below</p>
+        <div class="upload-cols-hint">
+          <code>keyword, search_volume, keyword_difficulty, current_ranking,</code>
+          <code>competitor_presence, content_type, search_intent, relevance_to_graphura</code>
+          <span class="upload-hint">Optional: <code>opportunity_category</code> (for accuracy check)</span>
+        </div>
+        <label class="btn btn-primary upload-btn-label">
+          Choose CSV File
+          <input type="file" id="gscFileInput" accept=".csv,.tsv,.txt" hidden/>
+        </label>
+      </div>
+      <div class="upload-loading hidden" id="uploadLoading">
+        <div class="spinner"></div>
+        <p>Analysing your GSC data...</p>
+      </div>
+    </div>
+
+    <!-- Dashboard (hidden until upload) -->
+    <div class="gsc-dashboard hidden" id="gscDashboard">
+
+      <!-- Summary KPI Cards -->
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <!-- Accuracy badge (shown only if opportunity_category col present) -->
+      <div id="accuracyBadge" class="hidden accuracy-banner"></div>
+
+      <!-- Opportunity Breakdown + Charts row -->
+      <div class="dash-row">
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <span class="dash-card-title">🎯 Opportunity Breakdown</span>
+            <button class="btn btn-ghost btn-sm" onclick="askGscAI('Give me a detailed analysis of my keyword opportunity breakdown and what actions I should take')">Ask AI ↗</button>
+          </div>
+          <div id="oppBreakdown"></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <span class="dash-card-title">📊 Keyword Difficulty</span>
+          </div>
+          <div class="chart-bars" id="ctrChart"></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <span class="dash-card-title">🔊 Search Volume</span>
+          </div>
+          <div class="chart-bars" id="posChart"></div>
+        </div>
+      </div>
+
+      <!-- Intent + Content + Competitor row -->
+      <div class="dash-row">
+        <div class="dash-card">
+          <div class="dash-card-header"><span class="dash-card-title">🎯 Search Intent</span></div>
+          <div class="chart-bars" id="intentChart"></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header"><span class="dash-card-title">📄 Content Type</span></div>
+          <div class="chart-bars" id="contentChart"></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header"><span class="dash-card-title">🏁 Competitor Presence</span></div>
+          <div class="chart-bars" id="competitorChart"></div>
+        </div>
+      </div>
+
+      <!-- Tabs for keyword tables -->
+      <div class="dash-card full-width">
+        <div class="tab-bar">
+          <button class="tab-btn active" data-tab="high">🚀 High Opportunity</button>
+          <button class="tab-btn" data-tab="medium">📈 Medium Opportunity</button>
+          <button class="tab-btn" data-tab="quickwins">⚡ Quick Wins</button>
+          <button class="tab-btn" data-tab="lowdiff">💎 Low Difficulty</button>
+        </div>
+        <div class="tab-content" id="tabContent"></div>
+      </div>
+
+      <!-- AI Summary -->
+      <div class="dash-card full-width ai-summary-card">
+        <div class="dash-card-header">
+          <span class="dash-card-title">🤖 AI Strategic Summary</span>
+          <button class="btn btn-primary btn-sm" onclick="generateAiSummary()">Generate Summary</button>
+        </div>
+        <div id="aiSummaryContent">
+          <p class="muted-text">Click "Generate Summary" to get an AI-powered strategic analysis of your keyword data.</p>
+        </div>
+      </div>
+
+      <div class="dash-actions">
+        <button class="btn btn-ghost" onclick="resetDashboard()">📂 Upload New File</button>
+        <button class="btn btn-ghost" onclick="askGscAI('What are the top 3 SEO actions I should take based on my keyword data?')">💬 Ask AI About This Data</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI ASSISTANT ── -->
+<section class="assistant-section" id="assistant">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">AI Powered</span>
+      <h2>SEO AI Assistant</h2>
+      <p>Ask anything about SEO strategy, keyword targeting, and content planning</p>
+    </div>
+
+    <div class="chat-wrapper">
+      <div class="chat-box" id="chatBox">
+        <div class="chat-msg bot">
+          <div class="msg-avatar">🤖</div>
+          <div class="msg-bubble">
+            <p>👋 Hi! I'm your <strong>SEO AI Assistant</strong> for Graphura India.</p>
+            <p>I can help you with keyword strategy, content planning, and ranking tactics. Try asking:</p>
+            <ul>
+              <li>How do I rank for high opportunity keywords?</li>
+              <li>What content should I create for commercial intent?</li>
+              <li>How to beat competitors in local SEO?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-suggestions">
+        <button class="suggestion-chip" onclick="sendSuggestion(this)">🚀 High opportunity keywords strategy</button>
+        <button class="suggestion-chip" onclick="sendSuggestion(this)">✍️ Best content type for SEO</button>
+        <button class="suggestion-chip" onclick="sendSuggestion(this)">📍 Local SEO tips for India</button>
+        <button class="suggestion-chip" onclick="sendSuggestion(this)">🔗 Link building strategies</button>
+      </div>
+
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Ask about SEO strategy, keywords, content..." />
+        <button class="btn btn-primary" id="sendBtn" onclick="sendMessage()">Send ↗</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">📈</span>
+        <span class="brand-name">Graphura <span class="brand-accent">SEO</span></span>
+        <p>AI-powered SEO opportunity finder built for Graphura India Private Limited</p>
+      </div>
+      <div class="footer-info">
+        <p>🤖 Powered by Random Forest ML + Gemini AI</p>
+        <p>📊 Trained on 500+ real SEO keywords</p>
+        <p>🇮🇳 Built for Indian digital marketing market</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Graphura India Private Limited · Internship Project — SEO Opportunity Finder</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
